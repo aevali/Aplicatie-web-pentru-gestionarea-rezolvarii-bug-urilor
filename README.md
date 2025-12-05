@@ -1,6 +1,4 @@
-
-
-descriere: >
+descriere:
   Acesta este serviciul RESTful pentru proiectul de Bug Tracking.
   Sistemul permite inregistrarea utilizatorilor, gestionarea proiectelor,
   adaugarea membrilor (MP/TST) si managementul bug-urilor.
@@ -20,8 +18,8 @@ functionalitati:
 
 instalare_si_rulare:
   pasi:
-    - Clonare repository:
-      - "git clone https://github.com/aevali/Aplicatie-web-pentru-gestionarea-rezolvarii-bug-urilor.git"
+  - Clonare repository:
+    - "git clone https://github.com/aevali/Aplicatie-web-pentru-gestionarea-rezolvarii-bug-urilor.git"
       - "cd Aplicatie-web-pentru-gestionarea-rezolvarii-bug-urilor"
     - Instalare dependente:
       - "npm install"
