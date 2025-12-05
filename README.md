@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-descriere:
+Descriere:
   Acesta este serviciul RESTful pentru proiectul de Bug Tracking.
   Sistemul permite inregistrarea utilizatorilor, gestionarea proiectelor,
   adaugarea membrilor (MP/TST) si managementul bug-urilor.
