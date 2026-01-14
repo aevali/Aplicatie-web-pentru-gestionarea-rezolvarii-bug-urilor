@@ -8,6 +8,7 @@
 
 import { useState } from 'react'
 import axios from 'axios'
+import API_URL from '../api'
 
 function Register({ onRegister, onSwitchToLogin }) {
     // starea pentru campurile formularului
@@ -39,7 +40,7 @@ function Register({ onRegister, onSwitchToLogin }) {
 
         try {
             // trimitem datele la backend
-            const response = await axios.post('https://aplicatie-web-backend.onrender.com/auth/register', {
+            const response = await axios.post(`${API_URL}/auth/register`, {
                 name,
                 email,
                 password

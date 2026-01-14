@@ -12,6 +12,7 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import axios from 'axios'
+import API_URL from '../api'
 
 function ProjectList({ user, showOnlyMine, onSelectProject }) {
   // lista de proiecte
@@ -37,8 +38,8 @@ function ProjectList({ user, showOnlyMine, onSelectProject }) {
     try {
       // daca showOnlyMine e true, luam doar proiectele user-ului
       const url = showOnlyMine
-        ? 'https://aplicatie-web-backend.onrender.com/my-projects'
-        : 'https://aplicatie-web-backend.onrender.com/projects'
+        ? `${API_URL}/my-projects`
+        : `${API_URL}/projects`
 
       const headers = showOnlyMine ? { headers: { 'X-User-Id': user.id } } : {}
       const response = await axios.get(url, headers)
@@ -67,7 +68,7 @@ function ProjectList({ user, showOnlyMine, onSelectProject }) {
     }
 
     try {
-      await axios.post('https://aplicatie-web-backend.onrender.com/projects', newProject, getAuthHeaders())
+      await axios.post(`${API_URL}/projects`, newProject, getAuthHeaders())
       setSuccess('Proiect creat cu succes!')
       setNewProject({ name: '', repository: '', description: '' })
       setShowAddForm(false)
@@ -82,7 +83,7 @@ function ProjectList({ user, showOnlyMine, onSelectProject }) {
   // handler pentru a te alatura unui proiect ca Tester
   const handleJoinProject = async (projectId) => {
     try {
-      await axios.post(`https://aplicatie-web-backend.onrender.com/projects/${projectId}/join`, {}, getAuthHeaders())
+      await axios.post(`${API_URL}/projects/${projectId}/join`, {}, getAuthHeaders())
       setSuccess('Te-ai alăturat proiectului ca Tester!')
       fetchProjects()
 

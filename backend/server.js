@@ -26,6 +26,7 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions))
+app.use(express.json())  // middleware pentru a parsa JSON din body-ul request-urilor
 
 
 /*
