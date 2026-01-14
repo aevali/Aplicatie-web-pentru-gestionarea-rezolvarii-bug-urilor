@@ -17,7 +17,8 @@ const cors = require('cors')
 const app = express()
 const corsOptions = {
     origin: [
-        'https://aplicatie-web-bugs-frontend.vercel.app',  // URL-ul production de pe Vercel
+        'https://aplicatieweb-tw-proiect.vercel.app',     // URL-ul production curent
+        'https://aplicatie-web-bugs-frontend.vercel.app', // URL-ul vechi (backup)
         'http://localhost:5173',  // pentru development local
         'http://localhost:3000'   // pentru development local
     ],
