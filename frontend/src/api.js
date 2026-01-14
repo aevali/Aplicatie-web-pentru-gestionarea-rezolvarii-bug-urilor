@@ -12,6 +12,6 @@ const isDevelopment = window.location.hostname === 'localhost' ||
 // URL-ul API-ului - schimba automat intre local si production
 export const API_URL = isDevelopment
     ? 'http://localhost:8080'          // Pentru development local
-    : 'https://aplicatie-web-backend.onrender.com'  // Pentru production
+    : 'https://aplicatieweb-bcj6.onrender.com'  // Pentru production
 
 export default API_URL
