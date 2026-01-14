@@ -1,0 +1,29 @@
+# Fisiere si foldere pe care Git le ignora
+# (nu le urcam pe GitHub pentru ca sunt generate sau contine date sensibile)
+
+# Dependentele Node.js (se instaleaza cu npm install)
+node_modules/
+
+# Baza de date SQLite (se creeaza automat la rulare)
+*.sqlite
+database.sqlite
+
+# Fisiere de configurare locale
+.env
+.env.local
+
+# Foldere generate de build
+build/
+dist/
+
+# Fisiere de sistem
+.DS_Store
+Thumbs.db
+
+# Log-uri
+*.log
+npm-debug.log*
+
+# Editor configs
+.vscode/
+.idea/
