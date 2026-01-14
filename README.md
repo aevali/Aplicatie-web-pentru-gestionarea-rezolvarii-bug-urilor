@@ -27,7 +27,7 @@ npm install
 node server.js
 ```
 
-Serverul va rula pe **http://localhost:8080**
+Serverul va rula pe **https://aplicatieweb-bcj6.onrender.com**
 
 ### 2. Porneste frontend-ul
 

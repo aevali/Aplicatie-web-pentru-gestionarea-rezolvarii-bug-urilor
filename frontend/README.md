@@ -35,7 +35,7 @@ Foloseste **axios** pentru a face request-uri HTTP catre backend-ul de pe portul
 
 Exemplu din cod:
 ```javascript
-const response = await axios.get('http://localhost:8080/projects')
+const response = await axios.get('https://aplicatieweb-bcj6.onrender.com/projects')
 ```
 
 ## Note
