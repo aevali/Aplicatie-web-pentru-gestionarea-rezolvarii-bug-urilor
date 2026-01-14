@@ -37,8 +37,8 @@ function ProjectList({ user, showOnlyMine, onSelectProject }) {
     try {
       // daca showOnlyMine e true, luam doar proiectele user-ului
       const url = showOnlyMine
-        ? 'http://localhost:8080/my-projects'
-        : 'http://localhost:8080/projects'
+        ? 'https://aplicatieweb-bcj6.onrender.com/my-projects'
+        : 'https://aplicatieweb-bcj6.onrender.com/projects'
 
       const response = await axios.get(url, showOnlyMine ? getAuthHeaders() : {})
       setProjects(response.data)
@@ -66,7 +66,7 @@ function ProjectList({ user, showOnlyMine, onSelectProject }) {
     }
 
     try {
-      await axios.post('http://localhost:8080/projects', newProject, getAuthHeaders())
+      await axios.post('https://aplicatieweb-bcj6.onrender.com/projects', newProject, getAuthHeaders())
       setSuccess('Proiect creat cu succes!')
       setNewProject({ name: '', repository: '', description: '' })
       setShowAddForm(false)
@@ -81,7 +81,7 @@ function ProjectList({ user, showOnlyMine, onSelectProject }) {
   // handler pentru a te alatura unui proiect ca Tester
   const handleJoinProject = async (projectId) => {
     try {
-      await axios.post(`http://localhost:8080/projects/${projectId}/join`, {}, getAuthHeaders())
+      await axios.post(`https://aplicatieweb-bcj6.onrender.com/projects/${projectId}/join`, {}, getAuthHeaders())
       setSuccess('Te-ai alăturat proiectului ca Tester!')
       fetchProjects()
 

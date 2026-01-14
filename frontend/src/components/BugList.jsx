@@ -63,7 +63,7 @@ function BugList({ project, user, onBack }) {
   // incarca bug-urile de la server
   const fetchBugs = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/projects/${project.id}/bugs`)
+      const response = await axios.get(`https://aplicatieweb-bcj6.onrender.com/projects/${project.id}/bugs`)
       setBugs(response.data)
     } catch (err) {
       console.error('Eroare la incarcarea bug-urilor:', err)
@@ -74,7 +74,7 @@ function BugList({ project, user, onBack }) {
   // incarca membrii proiectului
   const fetchMembers = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/projects/${project.id}/members`)
+      const response = await axios.get(`https://aplicatieweb-bcj6.onrender.com/projects/${project.id}/members`)
       setMembers(response.data)
     } catch (err) {
       console.error('Eroare la incarcarea membrilor:', err)
@@ -103,7 +103,7 @@ function BugList({ project, user, onBack }) {
 
     try {
       await axios.post(
-        `http://localhost:8080/projects/${project.id}/bugs`,
+        `https://aplicatieweb-bcj6.onrender.com/projects/${project.id}/bugs`,
         newBug,
         getAuthHeaders()
       )
@@ -122,7 +122,7 @@ function BugList({ project, user, onBack }) {
   // handler pentru alocarea unui bug
   const handleAssignBug = async (bugId) => {
     try {
-      await axios.put(`http://localhost:8080/bugs/${bugId}/assign`, {}, getAuthHeaders())
+      await axios.put(`https://aplicatieweb-bcj6.onrender.com/bugs/${bugId}/assign`, {}, getAuthHeaders())
       setSuccess('Bug-ul a fost alocat!')
       fetchBugs()
       setTimeout(() => setSuccess(''), 3000)
@@ -135,7 +135,7 @@ function BugList({ project, user, onBack }) {
   // handler pentru renuntarea la un bug
   const handleUnassignBug = async (bugId) => {
     try {
-      await axios.put(`http://localhost:8080/bugs/${bugId}/unassign`, {}, getAuthHeaders())
+      await axios.put(`https://aplicatieweb-bcj6.onrender.com/bugs/${bugId}/unassign`, {}, getAuthHeaders())
       setSuccess('Ai renunțat la bug')
       fetchBugs()
       setTimeout(() => setSuccess(''), 3000)
@@ -149,7 +149,7 @@ function BugList({ project, user, onBack }) {
   const handleResolveBug = async (bugId) => {
     try {
       await axios.put(
-        `http://localhost:8080/bugs/${bugId}/resolve`,
+        `https://aplicatieweb-bcj6.onrender.com/bugs/${bugId}/resolve`,
         { resolvedCommitLink: resolveCommitLink },
         getAuthHeaders()
       )

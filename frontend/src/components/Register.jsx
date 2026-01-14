@@ -39,7 +39,7 @@ function Register({ onRegister, onSwitchToLogin }) {
 
         try {
             // trimitem datele la backend
-            const response = await axios.post('http://localhost:8080/auth/register', {
+            const response = await axios.post('https://aplicatieweb-bcj6.onrender.com/auth/register', {
                 name,
                 email,
                 password
