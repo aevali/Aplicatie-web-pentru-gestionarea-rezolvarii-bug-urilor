@@ -681,7 +681,7 @@ app.put('/bugs/:bugId', authMiddleware, async (req, res) => {
  * Serverul asculta pe portul 8080.
  * La pornire, sincronizeaza modelele cu baza de date (creeaza tabelele daca nu exista).
  */
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 app.listen(PORT, async () => {
     await sequelize.sync()  // sincronizeaza modelele cu DB-ul
     console.log(`Server pornit pe http://localhost:${PORT}`)
