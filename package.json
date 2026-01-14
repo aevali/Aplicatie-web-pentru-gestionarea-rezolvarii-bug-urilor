@@ -1,0 +1,15 @@
+{
+    "name": "bug-tracker",
+    "version": "1.0.0",
+    "description": "Aplicatie web pentru gestionarea bug-urilor",
+    "scripts": {
+        "start": "node backend/server.js",
+        "install-backend": "cd backend && npm install"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^5.2.1",
+        "sequelize": "^6.37.7",
+        "sqlite3": "^5.1.7"
+    }
+}
